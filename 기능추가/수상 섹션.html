@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards Slider</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    .awards-section {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .awards-image {
+      background: linear-gradient(45deg, #2c1810, #8b4f8c);
+      color: white;
+      padding: 60px 40px;
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .gcr-logo {
+      background: #c41e3a;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .awards-image h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .award-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .region {
+      font-size: 18px;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .winner {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .awards-content {
+      padding: 40px;
+      flex: 1 1 60%;
+      background: #fff;
+    }
+
+    .awards-content h3 {
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .awards-content p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* Swiper buttons */
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide {
+        flex-direction: column;
+      }
+
+      .awards-image,
+      .awards-content {
+        flex: 1 1 100%;
+        padding: 30px 20px;
+      }
+
+      .winner {
+        font-size: 26px;
+      }
+
+      .award-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="awards-section">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="awards-image">
+            <div class="gcr-logo">GCR</div>
+            <h3>AWARDS</h3>
+            <div class="award-title">MERGER CONTROL<br>MATTER OF THE YEAR -<br>APMEA</div>
+            <div class="region">Korean Air/Asiana</div>
+            <div class="winner">2025 WINNER</div>
+          </div>
+          <div class="awards-content">
+            <h3>법무법인(유) 세종, GCR awards 2025<br>'올해의 아태지역 기업결합상' 수상</h3>
+            <p>법무법인(유) 세종이 저명한 경쟁법 분야 전문저널인 GCR(Global Competition Review)이 수여하는 '올해의 아태지역 기업결합상(Merger Control Matter of the Year: Asia Pacific, Middle East and Africa)'을 수상하는 영예를 안았습니다.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="awards-image">
+            <div class="gcr-logo">GCR</div>
+            <h3>AWARDS</h3>
+            <div class="award-title">MERGER CONTROL<br>MATTER OF THE YEAR -<br>APMEA</div>
+            <div class="region">Korean Air/Asiana</div>
+            <div class="winner">2025 WINNER</div>
+          </div>
+          <div class="awards-content">
+            <h3>법무법인(유) 세종, GCR awards 2025<br>'올해의 아태지역 기업결합상' 수상</h3>
+            <p>법무법인(유) 세종이 저명한 경쟁법 분야 전문저널인 GCR(Global Competition Review)이 수여하는 '올해의 아태지역 기업결합상(Merger Control Matter of the Year: Asia Pacific, Middle East and Africa)'을 수상하는 영예를 안았습니다.</p>
+          </div>
+        </div>
+
+        <!-- 추가 슬라이드 여기에 더 넣을 수 있음 -->
+        <div class="swiper-slide">
+          <div class="awards-image">
+            <div class="gcr-logo">GCR</div>
+            <h3>AWARDS</h3>
+            <div class="award-title">MERGER CONTROL<br>MATTER OF THE YEAR -<br>APMEA</div>
+            <div class="region">Korean Air/Asiana</div>
+            <div class="winner">2025 WINNER</div>
+          </div>
+          <div class="awards-content">
+            <h3>법무법인(유) 세종, GCR awards 2025<br>'올해의 아태지역 기업결합상' 수상</h3>
+            <p>법무법인(유) 세종이 저명한 경쟁법 분야 전문저널인 GCR(Global Competition Review)이 수여하는 '올해의 아태지역 기업결합상(Merger Control Matter of the Year: Asia Pacific, Middle East and Africa)'을 수상하는 영예를 안았습니다.</p>
+          </div>
+        </div>
+        
+        
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
+
