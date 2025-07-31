@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/styles/work_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    
+    <style>
+        /* Swiper 스타일 추가 */
+        .coding-swiper {
+            padding: 50px 0;
+            overflow: visible;
+        }
+        
+        .coding-swiper .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        
+        .coding-swiper .swiper-slide .coding_img {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .coding-swiper .swiper-slide .coding_img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.5s;
+        }
+        
+        .coding-swiper .swiper-slide:hover .coding_img img {
+            transform: scale(1.1);
+        }
+        
+        .coding-swiper .swiper-pagination {
+            bottom: 10px;
+        }
+        
+        .coding-swiper .swiper-pagination-bullet {
+            background: #FF8335;
+            opacity: 0.5;
+        }
+        
+        .coding-swiper .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+        
+        .coding-swiper .swiper-button-next,
+        .coding-swiper .swiper-button-prev {
+            color: #FF8335;
+            top: 45%;
+        }
+        
+        .coding-swiper .swiper-button-next:after,
+        .coding-swiper .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+/*footer*/
+footer {background: #222; color: white; padding: 3rem 0 1rem; margin-top: 4rem;}
+footer .ftinner{ margin: 0 auto; width: 83.33%;}
+footer .ftinner strong{font-size: 32px; padding-top: 50px; display: block; ; font-family: "Montserrat", sans-serif;;}
+footer .ftinner hr{padding: 5px; border-bottom: 1px solid rgba(94, 94, 94, 0.4);} 
+footer .ftinner > p{font-size: 1.5rem; padding-top: 20px; color: #575757;}
+footer .ftinner .contact_list{padding-top: 26px; }
+footer .ftinner .contact_list ul{display: flex; gap:30px}
+footer .ftinner .contact_list ul li a{ padding: 10px; font-size: 24px;}
+footer .ftinner .contact_list ul li a span{display: block; font-size: 28px;  padding-top: 8px; font-weight: 500; color: white;}
+        
+
+.go_btn2 {
+  display: inline-block;              
+  border-radius: 15px;
+  background-color: #ffdcc6;
+  font-size: 1rem;
+  padding: 5px 15px;                 
+  color: #ff741e;
+  margin-top: 15px;
+  text-align: center;
+  white-space: nowrap;                
+}
+.pop {
+      display: inline-block;               
+  border-radius: 15px;
+  background-color: #ffdcc6;
+  font-size: 1rem;
+  padding: 5px 15px;                  
+  color: #ff741e;
+  margin-top: 15px;
+  text-align: center;
+  white-space: nowrap;                 
+}
+
+        /* 모바일에서 네비게이션 버튼 숨기기 */
+        @media screen and (max-width: 768px) {
+            .coding-swiper .swiper-button-next,
+            .coding-swiper .swiper-button-prev {
+                display: none;
+            }
+            
+            .coding-swiper {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap"></div>
+<!-- 모바일 메뉴 -->
+<div class="mbmenu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- 헤더 -->
+<header>
+  <nav>
+    <ul>
+    <li><a href="/HOME.html">HOME</a></li>
+    <li><a href="/HOME.html#about">ABOUT</a></li>
+    <li><a href="/about me.html">ABOUT-ME</a></li>
+    <li><a href="/HOME.html#skill">SKILL</a></li>
+    <li><a href="/HOME.html#coding">CODING</a></li>
+    </ul>
+  </nav>
+</header>
+
+        <!-- Mobile header -->
+        <div class="open_nav">
+            <ul class="subnav_menu">
+                    <li><a href="/HOME.html">HOME</a></li>
+                    <li><a href="/HOME.html#about">ABOUT</a></li>
+                    <li><a href="/about me.html">ABOUT-ME</a></li>
+                    <li><a href="/HOME.html#skill">SKILL</a></li>
+                    <li><a href="/HOME.html#coding">CODING</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Title -->
+        <div class="main_title">
+            <h4>PORTFOLIO</h4>
+        </div>
+
+        <!-- Main Tab Navigation -->
+        <div class="main_tab_container">
+            <div class="main_tab">
+                <button class="on">Learning</button>
+                <button>Coding</button>
+                <button>UI/UX Design</button>
+            </div>
+        </div>
+
+        <section>
+            <!-- Learning Section -->
+            <div class="item Learning">
+                <div class="inner">
+                    <div class="title">
+                        <span>Learning Process</span>
+                    </div>
+                    
+                    <!-- Learning content would go here -->
+                     <ul>
+                        <li>
+                            <div class="coding_img">
+                                <img src="/images/법무법인 세종 로고.svg" alt="Coding Project 1">
+                            </div>
+                            <div class="coding_text">
+                                <strong>웹사이트 프로젝트</strong>
+                                <span> 법무법인 세종 리디자인</span>
+                                <p>
+                                    <span>HTML/CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>jQuery를 활용한 인터랙티브 웹사이트</span>
+                                </p>
+                                <div class="button_area">
+                                    <a href="/세종_리디자인/법무법인 세종 리디자인.html" class="go_btn2">리디자인</a>
+                                </div>
+                                <div class="button_area">
+                                    <a href="https://shinkim.com/kor" class="go_btn2">원본</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        <!-- Main Content Sections -->
+        <section>
+            <!-- Coding Section -->
+            <div class="item coding">
+                <div class="inner">
+                    <div class="title">
+                        <span>Coding Projects</span>
+                    </div>
+                    
+                    <!-- Swiper Container -->
+                    <div class="swiper coding-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="coding_img">
+                                    <img src="/images/Chat GPT image 로고 (1)-2.png" alt="Coding Project 1">
+                                </div>
+                                <div class="coding_text">
+                                    <strong>웹사이트 프로젝트</strong>
+                                    <span>반응형 웹사이트</span>
+                                    <p>
+                                        <span>HTML/CSS</span>
+                                        <span>JavaScript</span>
+                                        <span>jQuery를 활용한 인터랙티브 웹사이트</span>
+                                    </p>
+                                    <div class="button_area">
+                                        <a href="/jQuery_Web.html" class="go_btn2">View<span>화살표</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="coding_img">
+                                    <img src="/images/Chat GPT image 로고 (3)-2.png" alt="Coding Project 2">
+                                </div>
+                                <div class="coding_text">
+                                    <strong>React 애플리케이션</strong>
+                                    <span>SPA 웹앱</span>
+                                    <p>
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>모던 웹 기술을 활용한 싱글페이지 애플리케이션</span>
+                                    </p>
+                                    <div class="button_area">
+                                        <a href="#" class="go_btn2">View<span>화살표</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="coding_img">
+                                    <img src="/images/Chat GPT image 로고 (5)-2.png"  alt="Coding Project 3">
+                                </div>
+                                <div class="coding_text">
+                                    <strong>모바일 앱</strong>
+                                    <span>크로스플랫폼 앱</span>
+                                    <p>
+                                        <span>React Native</span>
+                                        <span>Firebase</span>
+                                        <span>iOS/Android 호환 모바일 애플리케이션</span>
+                                    </p>
+                                    <div class="button_area">
+                                        <a href="#" class="go_btn2">View<span>화살표</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="coding_img">
+                                    <img src="/images/Chat GPT image 로고 (6)-2.png" alt="Coding Project 4">
+                                </div>
+                                <div class="coding_text">
+                                    <strong>E-Commerce 플랫폼</strong>
+                                    <span>온라인 쇼핑몰</span>
+                                    <p>
+                                        <span>Vue.js</span>
+                                        <span>Express.js</span>
+                                        <span>완전한 온라인 쇼핑 플랫폼 구축</span>
+                                    </p>
+                                    <div class="button_area">
+                                        <a href="#" class="go_btn2">View<span>화살표</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="coding_img">
+                                    <img src="/images/Chat GPT image 로고 (8)-1.png"  alt="Coding Project 5">
+                                </div>
+                                <div class="coding_text">
+                                    <strong>데이터 시각화 대시보드</strong>
+                                    <span>실시간 분석 도구</span>
+                                    <p>
+                                        <span>D3.js</span>
+                                        <span>Python</span>
+                                        <span>실시간 데이터 분석 및 시각화 시스템</span>
+                                    </p>
+                                    <div class="button_area">
+                                        <a href="#" class="go_btn2">View<span>화살표</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                        
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Section -->
+            <div class="item design_1">
+                <div class="inner">
+                    <div class="uiux_con">
+                        <div class="uiux_title_area">
+                            <div class="uiux_title">
+                                <strong>UI/UX<br class="br"> DESIGN</strong>
+                                <p>2025년 세무사 1차 재정학 (62회)</p>
+                                <a href="/2025년 세무사 1차 재정학 (62회).html" class="go_btn2">View<span>화살표</span></a>
+                            </div>
+                        </div>
+                        <div class="uiux_img_area">
+                            <img src="/images/ChatGPT 세무사 (1).png"  alt="UI/UX Design">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Projects Section -->
+            <div class="item design_2">
+                <div class="inner">
+                    <div class="content_design">
+                        <div class="content_txt_area">
+                            <div class="content_txt">
+                                <ul>
+                                    <li><span>Web Design</span></li>
+                                    <li><span>Mobile Design</span></li>
+                                    <li><span>Brand Design</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Web Design Content -->
+                        <div class="content_img_area">
+                            <ul class="list">
+                                <li>
+                                    <img src="/images/Chat GPT image 로고 (7)-1.png" alt="Web Design 1">
+                                </li>
+                                <li>
+                                    <img src="/images/ChatGPT 세무사 (7).png" alt="Web Design 2">
+                                </li>
+                            </ul>
+                            <ul class="pop_list">
+                                <li><a href="" class="pop">상세보기</a></li>
+                                <li><a href="#" class="pop">상세보기</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Mobile Design Content -->
+                        <div class="content_img_area">
+                            <ul class="list">
+                                <li><img src="/images/Chat GPT image 로고 (6)-1.png" alt="Mobile Design 1"></li>
+                                <li><img src="/images/ChatGPT 세무사 (3).png" alt="Mobile Design 2"></li>
+                            </ul>
+                            <ul class="pop_list">
+                                <li><a href="#" class="pop">상세보기</a></li>
+                                <li><a href="#" class="pop">상세보기</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Brand Design Content -->
+                        <div class="content_img_area">
+                            <ul class="list">
+                                <li><img src="/images/Chat GPT image 로고 (3)-1.png" alt="Brand Design 1"></li>
+                                <li><img src="/images/ChatGPT 세무사 (5).png" alt="Brand Design 2"></li>
+                            </ul>
+                            <ul class="pop_list">
+                                <li><a href="#" class="pop">상세보기</a></li>
+                                <li><a href="#" class="pop">상세보기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup Windows -->
+        <div class="popup">
+            <div class="popcon">
+                <div class="pop_text">
+                    <div class="pop_maintxt">
+                        <strong>웹 디자인 프로젝트</strong>
+                        <button class="close"><img src="/images/icons8-close-window-50.png" alt="닫기"></button>
+                    </div>
+                    <hr>
+                    <ol>
+                        <li>
+                            <dt>프로젝트 개요</dt>
+                            <dd>반응형 웹사이트 디자인 및 구현</dd>
+                        </li>
+                        <li>
+                            <dt>사용 기술</dt>
+                            <dd>HTML5, CSS3, JavaScript, jQuery</dd>
+                        </li>
+                        <li>
+                            <dt>특징</dt>
+                            <dd>모바일 퍼스트 디자인, 크로스 브라우저 호환</dd>
+                        </li>
+                        <li><a href="/web1.html" class="pop">웹사이트</a></li>
+                    </ol>
+                </div>
+                <div class="pop_img">
+                    <img src="/images/해커스.png" alt="프로젝트 상세 이미지">
+                </div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popcon">
+                <div class="pop_text">
+                    <div class="pop_maintxt">
+                        <strong>모바일 앱 디자인</strong>
+                        <button class="close"><img src="/images/icons8-close-window-50.png" alt="닫기"></button>
+                    </div>
+                    <hr>
+                    <ol>
+                        <li>
+                            <dt>프로젝트 개요</dt>
+                            <dd>iOS/Android 네이티브 앱 UI/UX 디자인</dd>
+                        </li>
+                        <li>
+                            <dt>디자인 도구</dt>
+                            <dd>Figma, Adobe XD, Sketch</dd>
+                        </li>
+                        <li>
+                            <dt>특징</dt>
+                            <dd>사용자 중심 인터페이스, 직관적인 네비게이션</dd>
+                        </li>
+                    </ol>
+                </div>
+                <div class="pop_img">
+                    <img src="#" alt="모바일 앱 디자인">
+                    <img src="#" alt="모바일 앱 디자인">
+                </div>
+            </div>
+        </div>
+
+<!-- Footer -->
+<footer>
+  <div class="ftinner">
+    <strong>Name : 이경민</strong>
+    <hr>
+    <p>© 2025 웹 포트폴리오. All Rights Reserved.</p>
+    <div class="contact_list">
+      <ul>
+        <li><a href="https://github.com/rudals-lee"><i class="fab fa-github" style="color: white;"></i><span>GitHub<br> 
+          https://github.com/rudals-lee
+        </span></a></li>
+        <li><a href="#"><i class="fab fa-instagram" style="color: white;"></i><span>Instagram<br>
+          계정 없음
+        </span></a></li>
+        <li><a href="#"><i class="fas fa-envelope" style="color: white;"></i><span>email<br>
+          lkm4175@gmail.com
+        </span></a></li>
+        <li><a href="#"><i class="fas fa-phone-alt" style="color: white;"></i><span>전화번호<br>
+          010-4559-4175
+        </span></a></li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        <!-- Top Button -->
+        <div class="top_btn">
+            <a href="#"><img src="/images/scroll-up-64.png" alt="위로가기"></a>
+        </div>
+
+    <script>
+        $(function () {
+            // Swiper for Coding Projects
+            const codingSwiper = new Swiper('.coding-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true, // 무한 루프
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    }
+                }
+            });
+
+            // Main tab functionality
+            $(".main_tab button").click(function (e) {
+                e.preventDefault();
+                var tg = $(this);
+                var i = tg.index();
+                var section = $("section .item").eq(i);
+                var tt = section.offset().top;
+                $(".main_tab button").removeClass("on");
+                $(this).addClass("on");
+                $("html,body").stop().animate({ scrollTop: tt }, 600);
+            });
+
+            // Top button
+            $(window).scroll(function () {
+                t = $(window).scrollTop();
+                if (t > 400) $(".top_btn>a").fadeIn();
+                else {
+                    $(".top_btn>a").fadeOut();
+                }
+            });
+            $(window).trigger("scroll");
+            $(".top_btn>a").click(function (e) {
+                e.preventDefault();
+                $("body,html").animate({ scrollTop: 0 });
+            });
+
+            // Content design tabs
+            $(".content_design .content_img_area").hide();
+            $(".content_design .content_img_area").eq(0).show();
+
+            $(".content_txt>ul>li").click(function () {
+                var i = $(this).index();
+                $(".content_img_area").hide();
+                $(".content_img_area").eq(i).show();
+                return false;
+            });
+
+            // Mobile menu
+            $(".mbmenu").click(function () {
+                $(".mbmenu").toggleClass("active");
+                $(".open_nav").stop().toggleClass("active");
+            });
+
+            // Popup functionality
+            $(".content_img_area>.pop_list>li").click(function (e) {
+                e.preventDefault();
+                let i = $(this).index(".pop_list>li");
+                $(".popup").eq(i).show();
+            });
+            $(".close").click(function (e) {
+                e.preventDefault();
+                $(".popup").hide();
+            });
+        });
+
+          document.addEventListener("DOMContentLoaded", function () {
+    // 모든 메뉴 링크에 이벤트 부여
+    const menuLinks = document.querySelectorAll(".subnav_menu li a");
+    const openNav = document.querySelector(".open_nav");
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        openNav.classList.remove("active");
+      });
+    });
+  });
+    </script>
+</body>
+</html>
